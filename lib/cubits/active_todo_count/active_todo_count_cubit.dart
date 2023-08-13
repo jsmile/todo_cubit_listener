@@ -12,4 +12,9 @@ class ActiveTodoCountCubit extends Cubit<ActiveTodoCountState> {
   ActiveTodoCountCubit({
     required this.initialActiveTodoCount,
   }) : super(ActiveTodoCountState(activeTodoCount: initialActiveTodoCount));
+
+  // activeTodoCount 를 param으로 전달받아 State 설정준비
+  void setActiveTodoCount(int activeTodoCount) {
+    emit(state.copyWith(activeTodoCount: activeTodoCount));
+  }
 }
